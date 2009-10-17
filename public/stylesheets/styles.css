@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 15pt;
+	font-size: 11pt;
+	color: #191919;
+	background-image: url(/images/footer-bg2.gif);
+	background-repeat: repeat;
+	}
+#wrap {
+	background-image: url(/images/bg.gif);
+	background-repeat: repeat;
+	}	
+.wrap {
+	width: 920px;
+	margin: 0 auto;
+	}	
+.clear {
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 0;
+	}	
+h1 {
+	font-family: "Times New Roman", Times, serif;
+	border-bottom: solid #C7BCA3 2px;
+	width: 100%;
+	margin: 0 0 15px 0;
+	padding: 0;
+	font-size: 18pt;
+	}	
+p {padding: 0 0 15px 0; margin: 0;}
+#header {
+	background-image: url(/images/header-bg.png);
+	background-repeat: repeat-x;
+	height: 95px;
+	width: 100%;
+	line-height: 95px;
+	vertical-align: middle;
+	margin: 0 0 20px 0;
+	}
+	* html #header {background-image: url(/images/header-bg.gif);}
+	#logo {
+		background-image: url(/images/logo.gif);
+		background-repeat: no-repeat;
+		width: 131px;
+		height: 58px;
+		float: left;
+		margin: 18px 0 0 0;
+		}
+	#menu {
+		display: block;
+		float: right;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		}	
+		#menu li {
+			float: left;
+			}
+		#menu a {
+			display: block;
+			float: left;
+			color: #D3C5A3;
+			text-transform: uppercase;
+			text-decoration: none;
+			padding: 0 15px 0 15px;
+			font-weight: bold;
+			font-size: 10pt;
+			}
+			#menu a:hover {
+				background-image: url(/images/menu-hover.gif);
+				background-position: center 57px;
+				background-repeat: no-repeat;
+				color: #ffffff;
+				}
+#banner {
+	width: 876px;
+	height: 117px;
+	margin: 0 auto 20px auto;
+	padding: 37px 20px 0 20px;
+	background-image: url(/images/banner.png);
+	}
+	* html #banner {background-image: url(/images/banner.gif);}
+	#banner h2 {
+		color: #ffffff;
+		font-family: "Times New Roman", Times, serif;
+		font-weight: normal;
+		font-size: 19pt;
+		text-align: center;
+		line-height: 26pt;
+		margin: 0;
+		padding: 0;
+		}
+#sidebar {
+	width: 315px;
+	float: right;
+	margin: 0 0 30px 0;
+	}	
+	#sidebar .hr {
+		display: block;
+		line-height: 0;
+		font-size: 0;
+		background-image: url(/images/sidebar-hr.png);
+		width: 303px;
+		height: 8px;
+		border: none;
+		margin: 1px auto 5px auto;
+		}
+		* html #sidebar .hr {background-image: url(/images/sidebar-hr.gif);}
+	#sidebar .whatido {
+		color: #ffffff;
+		font-size: 10pt;
+		font-weight: bold;
+		line-height: 14pt;
+		width: 308px;
+		margin: 0 auto;
+		}
+		#sidebar .whatido h2 {
+			width: 177px;
+			height: 23px;
+			line-height: 23px;
+			overflow: hidden;
+			margin: 0 auto;
+			display: block;
+			}
+			#sidebar .whatido h2 .h2 {
+				background-image: url(/images/sidebar-whatwedo.png);
+				background-repeat: no-repeat;
+				display: block;
+				width: 177px;
+				height: 23px;
+				}
+				* html #sidebar .whatido h2 .h2 {background-image: url(/images/sidebar-whatwedo.gif);}
+		#sidebar .whatido .box {
+			width: 295px;
+			margin: 0 auto;
+			}
+			#sidebar .whatido .box .top {
+				background-image: url(/images/sidebar-box-top.png);
+				background-position: top;
+				background-repeat: no-repeat;
+				}
+				* html #sidebar .whatido .box .top {background-image: url(/images/sidebar-box-top.gif);}
+			#sidebar .whatido .box .bottom {
+				background-image: url(/images/sidebar-box-bottom.png);
+				background-position: bottom;
+				background-repeat: no-repeat;
+				padding: 9px 0 9px 0;
+				}	
+				* html #sidebar .whatido .box .bottom {background-image: url(/images/sidebar-box-bottom.gif);}
+			#sidebar .whatido .box .bg {
+				background-image: url(/images/sidebar-box-bg.png);
+				background-repeat: repeat-y;
+				width: 259px;
+				padding: 5px 18px 5px 18px;
+				}	
+				* html #sidebar .whatido .box .bg {background-image: url(/images/sidebar-box-bg.gif);}
+			#sidebar .whatido p {
+				padding: 0;
+				}	
+	#sidebar .recent {
+		width: 308px;
+		margin: 20px auto 0 auto;
+		}	
+		#sidebar .recent h2 {
+			width: 241px;
+			height: 21px;
+			overflow: hidden;
+			margin: 0 auto;
+			display: block;
+			}
+			#sidebar .recent h2 .h2 {
+				background-image: url(/images/sidebar-recentprojects.png);
+				background-repeat: no-repeat;
+				display: block;
+				width: 241px;
+				height: 21px;
+				}
+				* html #sidebar .recent h2 .h2 {background-image: url(/images/sidebar-recentprojects.gif);}
+		#sidebar .recent a {
+			background-image: url(/images/sidebar-thumbnail-bg.png);
+			width: 146px;
+			height:109px;
+			background-position: left;
+			display: block;
+			float: left;			
+			padding:6px 0 0 8px;
+			margin: 0 0 0 0;
+			}
+			* html #sidebar .recent a {background-image: url(/images/sidebar-thumbnail-bg.gif);}
+			#sidebar .recent a:hover {
+				background-position: right;
+				}
+			#sidebar .recent a img {
+				width: 138px;
+				height: 101px;
+				}
+#body {
+	width: 581px;
+	margin: 0 0 30px 0;
+	}
+	#body .top {
+		background-image: url(/images/content-top.png);
+		background-position: top;
+		background-repeat: no-repeat;
+		padding: 17px 0 0;
+		}
+		* html #body .top {background-image: url(/images/content-top.gif);}
+	#body .bottom {
+		background-image: url(/images/content-bottom.png);
+		background-position: bottom;
+		background-repeat: no-repeat;
+		width: 521px;
+		padding: 15px 30px 20px 30px;
+		}		
+		* html #body .bottom {background-image: url(/images/content-bottom.gif);}
+#footer {
+	background-image: url(/images/footer-bg.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	height: 27px;
+	width: 100%;
+	text-align: center;
+	padding-top: 25px;
+	vertical-align: middle;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 10pt;
+	position: relative;
+	top: -10px;
+	}		
+	* html #footer {background-image: url(/images/footer-bg.gif);}
+	
