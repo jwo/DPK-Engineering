@@ -1,10 +1,30 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-
+<%
+  path_without_slash = request.path_info
+  path_without_slash.slice!(0)
+%>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title><%= "#{path_without_slash.capitalize} | " if request.path_info != ""%>DPK Engineering<% if request.path_info == ''%> | South-East Texas Land Development<% end %></title>
+<% if false == true%>
+	<% if path_without_slash == ''%><meta name="description" content="Knight Irrigation and Lawn is a full-service irrigation and lawn maintence company that specializes in the installation and repair of sprinkler systems."/><% end %>
+<% end %>
+
 <link href="/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+
+<script language="JavaScript" src="/javascripts/jquery-1.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/jquery.lightbox-0.5.css" media="screen" /><script type="text/javascript" src="javascript/jquery.js"></script> 
+<script type="text/javascript" src="/javascripts/jquery.lightbox-0.5.js"></script> 
+
+
+<script type="text/javascript">
+$(function() {
+	$('a.lightbox').lightBox();
+});
+</script>
+
+
 </head>
 
 <body>
@@ -12,11 +32,12 @@
 
 <div id="header">
 <div class="wrap">
-    <a id="logo" href="index.html"></a>
+    <a  href="/"><img src="/images/dpk-engineering-logo.png" id="logo" border="0"></a>
     <ul id="menu">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
+		 <%
+	        	[ "about", "services", "careers", "contact" ].each do |route| %>
+	        	<%=nav_active(route, path_without_slash)%>
+	        	<%end%>
     </ul><!-- end #menu -->
 </div><!-- end .wrap -->    
 </div><!-- end #header -->
@@ -24,7 +45,7 @@
 <div class="wrap">
 
 	<div id="banner">
-    	<h2>A photo and/or a slogan would look nice here. <br />Otherwise this space can be removed.</h2>
+    	<h2>Land Development - Site Development - Municipal<br/>South East Texas</h2>
     </div><!-- end #banner -->
 
 	<div id="sidebar">
@@ -40,23 +61,17 @@
         <div class="recent">
           <h2><span class="h2"></span>Recent Projects</h2>
           <div class="hr"></div>
-          <a href="#"><img border="0" src="images/img.jpg" alt="image" /></a>
-          <a href="#"><img border="0" src="images/img.jpg" alt="image" /></a>
+          <a href="images/gallery/dubai.jpg" class="lightbox" title="Dubai Tree Planning"><img border="0" src="images/gallery/dubai-thumb.jpg" alt="Dubai Tree Planning" /></a>
+          <a href="images/gallery/fountain.jpg" class="lightbox" title=""><img border="0" src="images/gallery/fountain-thumb.jpg" alt="image" /></a>
           <br  class="clear" />
-          <a href="#"><img border="0" src="images/img.jpg" alt="image" /></a>
-          <a href="#"><img border="0" src="images/img.jpg" alt="image" /></a>
+          <a href="images/gallery/master.jpg" class="lightbox" title=""><img border="0" src="images/gallery/master-thumb.jpg" alt="image" /></a>
+          <a href="images/gallery/plan.jpg" class="lightbox" title=""><img border="0" src="images/gallery/plan-thumb.jpg" alt="image" /></a>
         </div><!-- end .recent -->  
               
     </div><!-- end #sidebar -->    
     
     <div id="body"><div class="top"><div class="bottom">
-    
-    	<h1>Heading</h1>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        
+    <%= yield %>
     </div></div></div><!-- end #body -->
     
     <br class="clear" />
@@ -65,7 +80,11 @@
 
 </div><!-- end #wrap -->
 
-<div id="footer">&copy; Copyright DPK Engineering 2009</div><!-- end #footer -->
+<div id="footer">&copy; Copyright DPK Engineering LLC 2009, all rights reserved</div><!-- end #footer -->
+
+<script src="/javascripts/supersleight.plugin.js"></script>
+<script>$('#logo').supersleight({shim: '/images/transparent.gif'});
+</script>
 
 </body>
 </html>

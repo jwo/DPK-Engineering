@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'sinatra'
+require 'navigation'
 
 get '/' do
  erb :index

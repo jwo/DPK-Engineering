@@ -44,8 +44,8 @@ p {padding: 0 0 15px 0; margin: 0;}
 	}
 	* html #header {background-image: url(/images/header-bg.gif);}
 	#logo {
-		background-image: url(/images/logo.gif);
-		background-repeat: no-repeat;
+		/*background-image: url(/images/dpk-engineering-logo.png);
+		background-repeat: no-repeat;*/
 		width: 131px;
 		height: 58px;
 		float: left;
@@ -71,7 +71,7 @@ p {padding: 0 0 15px 0; margin: 0;}
 			font-weight: bold;
 			font-size: 10pt;
 			}
-			#menu a:hover {
+			#menu a:hover, #menu a.active {
 				background-image: url(/images/menu-hover.gif);
 				background-position: center 57px;
 				background-repeat: no-repeat;
