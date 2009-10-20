@@ -2,6 +2,10 @@ require 'rubygems'
 require 'sinatra'
 require 'navigation'
 
+use Rack::Auth::Basic do |username, password|
+  [username, password] == ['admin', 'dpkpreview']
+end
+
 get '/' do
  erb :index
 end

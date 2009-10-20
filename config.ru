@@ -1,7 +1,8 @@
+
 require 'rubygems'
 require 'sinatra'
 require 'app.rb'
-path = ''
+path = '/u/apps/dpk-engineering/current'
 
 set :root, path
 set :views, path + '/views'
@@ -10,8 +11,8 @@ set :run, false
 set :environment, :production
 set :raise_errors, true
 
-#log = File.new("sinatra.log", "a")
-#STDOUT.reopen(log)
-#STDERR.reopen(log)
+log = File.new("log/sinatra.log", "a")
+STDOUT.reopen(log)
+STDERR.reopen(log)
 
 run Sinatra::Application
